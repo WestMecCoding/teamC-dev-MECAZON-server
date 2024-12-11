@@ -14,10 +14,14 @@ const employeeSchema = new mongoose.Schema({
 
     },
     password: {
-        type: String,
-        required: [true, "Pasword is required"]
+        Type: String,
+        required: [true, "Password is required"],
 
-    }
+
+    },
+
+
+
 
 
 
