@@ -18,13 +18,7 @@ const employeeSchema = new mongoose.Schema({
         required: [true, "Password is required"],
 
 
-    },
-
-
-
-
-
-
+    }
 })
 
 module.exports = mongoose.model('Employee', employeeSchema)

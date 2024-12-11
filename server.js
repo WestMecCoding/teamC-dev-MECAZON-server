@@ -6,15 +6,15 @@ const PORT = 3000;
 // Middleware
 app.use(cors());
 
-const GrocerySchema = require('./models/GroceryItems')
-const Employee = require('./models/EmployeeSchema')
-const User = require('./models/UserSchema')
+// const GrocerySchema = require('./models/GroceryItems')
+// const Employee = require('./models/EmployeeSchema')
+// const User = require('./models/UserSchema')
 
-const modelMapping = {
-  GroceryInventory: GrocerySchema,
-  Employees: Employee,
-  User: User
-}
+// const modelMapping = {
+//   GroceryInventory: GrocerySchema,
+//   Employees: Employee,
+//   User: User
+// }
 const connections = {}
 const models = {}
 
@@ -248,16 +248,16 @@ app.delete('/delete-collection/:database/:collection', async (req, res) => {
 });
 
 
-async function startServer() {
-  try {
-    app.listen(port, () => {
-      console.log(`server is listening on ${port}`);
-    })
-  }
-  catch (error) {
-    console.error('error starting the server');
-    process.exit(1);
-  }
-}
+// async function startServer() {
+//   try {
+//     app.listen(port, () => {
+//       console.log(`server is listening on ${port}`);
+//     })
+//   }
+//   catch (error) {
+//     console.error('error starting the server');
+//     process.exit(1);
+//   }
+// }
 
-startServer();
+// startServer();
