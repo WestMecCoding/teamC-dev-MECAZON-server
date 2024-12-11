@@ -2,6 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const PORT = 3000;
+const dotenv = require('dotenv')
+dotenv.config()
+const mongoose = require('mongoose')
+const uri = 'mongodb+srv://cmalco709:gvyETRsExBNq0xaV@mechazon-cluster.gaiip.mongodb.net/?retryWrites=true&w=majority&appName=MECHAZON-CLUSTER'
 
 // Middleware
 app.use(cors());
@@ -10,11 +14,11 @@ const GrocerySchema = require('./models/product-information')
 const Employee = require('./models/employee-information')
 const User = require('./models/user-information')
 
-// const modelMapping = {
-//   GroceryInventory: GrocerySchema,
-//   Employees: Employee,
-//   User: User
-// }
+const modelMapping = {
+  GroceryInventory: GrocerySchema,
+  Employees: Employee,
+  User: User
+}
 const connections = {}
 const models = {}
 
