@@ -21,8 +21,7 @@ app.get("/api/groceries", (req, res) => {
 app.get("/api/employees", (req, res) => {
   const employees = require("./db/employees.json");
   res.json(employees);
-});
-
+})
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
