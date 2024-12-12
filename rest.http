@@ -1,5 +1,5 @@
 @database = MECHAZON-DATABASE
-@collection = user-information
+@collection = employee-information
 
 @domain = http://localhost
 
