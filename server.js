@@ -15,13 +15,14 @@ app.use(express.json()); // To parse JSON bodies
 
 // Import Schemas
 const productSchema = require("./models/Product");
-// const userSchema = require('./models/User');
-// const employeeSchema = require('./models/Employee');
+const userSchema = require('./models/user-information');
+const employeeSchema = require('./models/employee-information');
 
 // Mapping of database names to their respective URIs
 const uriMap = {
   ProductsDB: process.env.MONGO_CLIENT_URI, // For Products collection
-  UsersEmployeesDB: process.env.MONGO_SERVER_URI, // For Users and Employees collections
+  UsersEmployeesDB: process.env.MONGO_SERVER_URI,
+  // For Users and Employees collections
 };
 
 // Store connections and models
@@ -70,12 +71,12 @@ const getModel = async (dbName, collectionName) => {
       case "Products":
         schema = productSchema;
         break;
-      // case "Users":
-      //   schema = userSchema;
-      //   break;
-      // case "Employees":
-      //   schema = employeeSchema;
-      //   break;
+      case "User":
+        schema = userSchema;
+        break;
+      case "Employee":
+        schema = employeeSchema;
+        break;
       default:
         throw new Error(`No schema defined for collection: ${collectionName}`);
     }

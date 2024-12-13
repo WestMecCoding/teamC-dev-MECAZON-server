@@ -8,19 +8,14 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": [
-        "dbaeumer.vscode-eslint",
-
-        "humao.rest-client"
-      ]
+      "extensions": ["dbaeumer.vscode-eslint", "humao.rest-client"]
     }
   },
   "forwardPorts": [3000],
   "remoteEnv": {
-    "MONGO_CLIENT_URI": "${localEnv:MONGO_DEV_CLIENT_URI
-}",
-    "MONGO_SERVER_URI": "${localEnv:MONGO_DEV_SERVER_URI}"
-  },
-  "postCreateCommand": "bash -c 'npm install && echo \"MONGO_CLIENT_URI=${ MONGO_DEV_CLIENT_URI}\nMONGO_SERVER_URI=${MONGO_DEV_SERVER_URI}\nPORT=3000\" > .env.production'",
-  "shutdownAction": "none"
+    "MONGO_CLIENT_URI": "${localEnv:MONGO_DEV_CLIENT_URI}",
+    "MONGO_SERVER_URI": "${localEnv:MONGO_DEV_SERVER_URI}",
+    "postCreateCommand": "bash -c 'npm install && echo \"MONGO_CLIENT_URI=${ MONGO_DEV_CLIENT_URI}\nMONGO_SERVER_URI=${MONGO_DEV_SERVER_URI}\nPORT=3000\" > .env.production'",
+    "shutdownAction": "none"
+  }
 }
