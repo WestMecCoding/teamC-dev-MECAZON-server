@@ -10,11 +10,11 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: [false, "Name is not required"]
     },
-    accountid: {
-        type: Number,
-        required: [true, "Account id is required"],
-        min: 0
-    },
+    // accountid: {
+    //     type: Number,
+    //     required: [true, "Account id is required"],
+    //     min: 0
+    // },
     password: {
         type: String,
         required: [true, "password is required"]
@@ -22,4 +22,4 @@ const UserSchema = new mongoose.Schema({
 
 
 })
-module.exports = mongoose.model('User', UserSchema)
+module.exports = UserSchema;

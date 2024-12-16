@@ -15,8 +15,8 @@ app.use(express.json()); // To parse JSON bodies
 
 // Import Schemas
 const productSchema = require("./models/Product");
-const userSchema = require('./models/user-information');
-const employeeSchema = require('./models/employee-information');
+const userSchema = require('./models/User');
+const employeeSchema = require('./models/Employee');
 
 // Mapping of database names to their respective URIs
 const uriMap = {
@@ -71,10 +71,10 @@ const getModel = async (dbName, collectionName) => {
       case "Products":
         schema = productSchema;
         break;
-      case "User":
+      case "Users":
         schema = userSchema;
         break;
-      case "Employee":
+      case "Employees":
         schema = employeeSchema;
         break;
       default:

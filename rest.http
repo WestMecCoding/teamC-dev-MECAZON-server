@@ -43,12 +43,17 @@ Content-Type: application/json
     "documents": [
         {
             "username": "jane_doe",
-            "email": "jane@example.com"
+            "name": "Jane Doe",
+            "accountid:": 920129,
+            "password": "pw12"
         },
         {
-            "username": "john_smith",
-            "email": "john@example.com"
+            "username": "john_doe",
+            "name": "John Doe",
+            "accountid:": 5612873,
+            "password": "pw20"
         }
+
     ]
 }
 
