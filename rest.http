@@ -4,7 +4,7 @@
 ###
 # Test GET /find/:database/:collection
 ###
-GET {{baseUrl}}/find/ProductsDB/Products
+GET {{baseUrl}}/find/12pm-client-MECAZON/products
 Content-Type: application/json
 
 ###
@@ -23,7 +23,7 @@ Content-Type: application/json
 # Test POST /insert/:database/:collection
 ###
 # Insert a single Product
-POST {{baseUrl}}/insert/ProductsDB/Products
+POST {{baseUrl}}/insert/12pm-client-MECAZON/products
 Content-Type: application/json
 
 {
